@@ -142,23 +142,26 @@
   padding-right: 4%;
 }
 
-.botton__text {
+.button {
+  background-color: var(--botton-bg-color);
+  border: var(--border);
+}
+
+.button__text {
   font-family: var(--accent-font-family);
   font-size: var(--botton-font-size);
 }
 
 .card__icon-button {
   border: none;
-  background-color: transparent;
   cursor: pointer;
   margin-right: 5px;
+  background-color: var(--botton-bg-color);
 }
 
 .card__like-button {
   inline-size: 130px;
   padding: 7px 0;
-  background-color: transparent;
-  border: var(--border);
   cursor: pointer;
 }
 
@@ -176,8 +179,7 @@
   justify-content: center;
 }
 
-.botton__save {
-  background-color: #fff;
+.button__save {
   padding: 15px 20px;
   margin-bottom: 100px;
   cursor: pointer;
@@ -271,6 +273,19 @@
 
 .sparks {
   opacity: 0;
+}
+
+.popup__window {
+  
+}
+
+.popup__text {
+  text-transform: uppercase;
+  font-family: var(--accent-font-family);
+}
+
+.close__button {
+  padding: 3px 133px;
 }
 
 @media (width <=768px) {
