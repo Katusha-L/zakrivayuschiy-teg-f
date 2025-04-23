@@ -222,7 +222,7 @@
   color: #fff;
  }
 
- .card__icon-button:hover .core {
+ .like-icon:hover .core {
   fill: var(--heart-hover-color);
   transition: fill 0.3s ease;
  }
