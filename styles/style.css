@@ -222,9 +222,59 @@
   color: #fff;
  }
 
- .like-icon:hover .core {
+ .card__icon-button:hover .core {
   fill: var(--heart-hover-color);
+  transition: fill 0.3s ease 0.03s;
+ }
+ 
+ .card__icon-button:hover .main-body {
+  fill: var(--heart-hover-color);
+  transition: fill 0.3s ease 0.05s;
+ }
+
+ .card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s ease 0.03s;
+ }
+
+ .card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s ease 0.05s;
+ }
+
+ 
+
+ .like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
   transition: fill 0.3s ease;
+ }
+
+ .like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s ease 0.05s;
+ }
+
+ .like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s ease 0.06;
+ }
+
+ .like-icon.is-liked .heart {
+  animation: heart_bigger 0.1s ease-in 1;
+  animation-duration: 0.3s;
+ }
+
+ .like-icon.is-liked .sparks {
+  animation: sparkles-shine 0.6s ease-in 0.3s forwards;
+  animation-duration: 1;
+ }
+
+ .sparks {
+  opacity: 0;
+ }
+
+ .like-icon:not(.is-liked) .contour {
+  transition: fill linear 0,1s;
  }
 
 @media (width <=768px) {

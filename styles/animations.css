@@ -10,4 +10,30 @@
 
 */
 
-@keyframes 
+@keyframes heart_bigger {
+    0% {
+       scale:1;
+    }
+
+    50% {
+        scale:1.25;
+     }
+
+    100% {
+        scale:1;
+     }
+}
+
+@keyframes sparkles-shine {
+    0% {
+       opacity:1;
+     }
+ 
+     50% {
+        opacity:1;
+      }
+ 
+     100% {
+        opacity:1;
+      }
+}
