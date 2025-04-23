@@ -291,7 +291,6 @@
         </button>
       </div>
     </article>
-    <div class="save__button__card">
       <button type="button" class="botton__save animation__button" onclick="window.save-id.showModal()"
         aria-controls="save-id">
         <svg class="save__button__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
@@ -299,18 +298,17 @@
         </svg>
         <span class="botton__text">Сохранить на память</span>
       </button>
-    </div>
-
-    <dialog open class="popup__window" id="save-id">
+      
+    <dialog class="popup__window" id="save-id">
       <div>
-        <svg class="save__button__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+        <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
           <use href="./svg/sprite#save-icon"></use>
         </svg>
-        <p class="botton__text">вставьте дискету, чтобы продолжить</p>
+        <p class="popup__text">вставьте дискету, чтобы продолжить</p>
       </div>
       <button class="button__ok animated__button" type="button" onclick="window.save-id.close()"
         aria-controls="save-id">
-        <span class="button__text">OK</span>
+        <span class="botton__text">OK</span>
       </button>
     </dialog>
 
