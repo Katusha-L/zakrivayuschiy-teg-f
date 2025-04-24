@@ -12,15 +12,15 @@
 
 @keyframes heart_bigger {
     0% {
-       scale:1;
+       transform:scale(1);
     }
 
     50% {
-        scale:1.25;
+        transform:scale(1.25);
      }
 
     100% {
-        scale:1;
+        transform:scale(1);
      }
 }
 

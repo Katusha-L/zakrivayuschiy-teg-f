@@ -22,6 +22,7 @@
   width: 696px;
   height: 364px;
   justify-self: center;
+  font-variation-settings: 'wght' var(--text-font-weight, 400);
 }
 
 .page__block {
@@ -36,13 +37,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
+  border: 1px solid black;
   gap: 20px;
   padding: var(--page-block-size);
   font-family: var(--accent-font-family);
   background-color: #fff;
   margin-top: 67px;
-  margin-bottom: 74px;
+  margin-bottom: 104px;
 }
 
 .header__logo {
@@ -52,17 +53,20 @@
 
 .header__title {
   font-size: 23px;
+  line-height: 23px;
+  font-weight: var(--text-font-weight);
+  text-transform: uppercase;
 }
 
 .card {
   background-color: #fff;
   border: var(--border);
-  margin-bottom: 54px;
-  min-block-size: 959px;
+  margin-block-end: 48px;
+  min-block-size: 696px;
 }
 
 .card__title {
-  font-variation-settings: "wght" var(--card-title-font-weight, 700);
+  font-variation-settings: "wght" var(--title-font-weight, 700);
   border: var(--border);
   font-size: var(--text-font-size);
   block-size: 31px;
@@ -71,8 +75,9 @@
 }
 
 .card__image {
-  inline-size: 696px;
-  block-size: 696px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image__filter-blank-page {
@@ -109,10 +114,10 @@
 
 .card__label {
   position: absolute;
-  top: 22px;
-  right: 11px;
+  top: 25px;
+  right: 25px;
   font-family: var(--accent-font-family);
-  line-height: 14px;
+  font-size: var(--button-font-size);
   font-weight: var(--text-font-weight);
   opacity: 0.5;
   mix-blend-mode: hard-light;
@@ -130,7 +135,11 @@
 
 .card__text {
   font-size: var(--text-font-size);
-  padding: 25px;
+  padding: 25px 25px 0 25px;
+}
+
+.card__text:last-of-type {
+  padding-bottom: 25px;
 }
 
 .card__response {
@@ -139,29 +148,28 @@
   justify-self: end;
   margin-bottom: 25px;
   margin-right: 25px;
-  padding-right: 4%;
 }
 
 .button {
-  background-color: var(--botton-bg-color);
-  border: var(--border);
+  background-color: var(--button-bg-color);
+  border: var(--button-border);
 }
 
 .button__text {
   font-family: var(--accent-font-family);
-  font-size: var(--botton-font-size);
+  font-size: var(--button-font-size);
 }
 
 .card__icon-button {
   border: none;
   cursor: pointer;
-  margin-right: 5px;
-  background-color: var(--botton-bg-color);
+  background-color: var(--button-bg-color);
 }
 
 .card__like-button {
   inline-size: 130px;
-  padding: 7px 0;
+  block-size: 38px;
+  
   cursor: pointer;
 }
 
@@ -172,17 +180,6 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
   transition: 0.3s ease;
-}
-
-.save__button__card {
-  display: flex;
-  justify-content: center;
-}
-
-.button__save {
-  padding: 15px 20px;
-  margin-bottom: 100px;
-  cursor: pointer;
 }
 
 .animation__button {
@@ -261,7 +258,7 @@
   transition: fill linear 0, 1s;
 }
 
-.like-icon.is-liked .heart {
+.like-icon.is-liked {
   animation: heart_bigger 0.1s ease-in 1;
   animation-duration: 0.3s;
 }
@@ -275,25 +272,69 @@
   opacity: 0;
 }
 
-.popup__window {
-  
+.button__save__card {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 100px;
+}
+
+.button__save {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  padding: 15px 19px;
+  gap: 7px;
+  cursor: pointer;
+  inline-size: 100%;
+  max-inline-size: 335px; 
+}
+
+.save__button__icon {
+  padding-top: 3px;  
+}
+
+.button__save__text {
+  padding-top: 5px;
+  inline-size: max-content;
+}
+
+.popup__window[open] {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 30px 20px;
+  inline-size: 357px;
+  padding: 31px;
+}
+
+.popup__window::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .popup__text {
   text-transform: uppercase;
   font-family: var(--accent-font-family);
+  line-height: 150%;
+}
+
+.popup__dialog {
+  grid-column: 1/-1;
 }
 
 .close__button {
   padding: 3px 133px;
 }
 
-@media (width <=768px) {
+@media (width <=375px) {
   .header {
     inline-size: 100%;
   }
 
   .card {
     inline-size: 100%;
+  }
+
+  .popup {
+    inline-size: 100%;
+    padding: 30px 40px;
   }
 }
