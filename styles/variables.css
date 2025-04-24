@@ -5,13 +5,14 @@
     --accent-color: black;
     --title-font-weight: 700;
     --text-font-weight: 400;
+    --header-logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --header-title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --text-font-size: 18px;
     --button-font-size: 14px;
     --bg-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
     --button-bg-color: white;
     --page-block-size: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) 0 clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem);
-    --border: 1px solid #000;
-    --button-border: 2px solid #000;
+    --border: 2px solid #000;
     --text-stroke-color: white;
     --animation-fill-color: red;
     --contour-color: black;
