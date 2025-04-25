@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font-family: 'Inter-Variable.woff2', monospace;
-    --accent-font-family: 'PressStart2P-Regular.woff', monospace;
+    --main-font-family: 'Inter', monospace;
+    --accent-font-family: 'PressStart2P', monospace;
     --accent-color: black;
     --title-font-weight: 700;
     --text-font-weight: 400;
