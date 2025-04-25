@@ -124,6 +124,7 @@
 .card__text {
   font-size: var(--text-font-size);
   padding: 25px 25px 0 25px;
+  line-height: 21px;
 }
 
 .card__text:not(:last-of-type) {
@@ -301,7 +302,7 @@
 .button__save {
   display: grid;
   grid-template-columns: min-content 1fr;
-  padding: 16px 18px ;
+  padding: 22px 16px ;
   gap: 8px;
   align-items: center;
   cursor: pointer;
