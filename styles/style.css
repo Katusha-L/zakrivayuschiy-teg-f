@@ -300,6 +300,7 @@
   display: flex;
   justify-self: center;
   padding-bottom: 100px;
+  inline-size: 335px;
 }
 
 .button__save {
@@ -310,7 +311,6 @@
   align-items: center;
   cursor: pointer;
   inline-size: 100%;
-  max-inline-size: 335px;
 }
 
 .save__button__icon {
@@ -322,9 +322,9 @@
   grid-template-columns: min-content 1fr;
   align-items: center;
   gap: 30px 20px;
-  inline-size: 357px;
-  block-size: 193px;
-  padding: 31px;
+  border: var(--border);
+  padding: 30px;
+  max-inline-size: 357px;
 }
 
 .popup__window::backdrop {
@@ -335,14 +335,17 @@
   text-transform: uppercase;
   font-family: var(--accent-font-family);
   line-height: 150%;
+  font-size: var(--button-font-size);
+  
 }
 
-.popup__dialog {
-  grid-column: 1/-1;
+.popup__dialog{
+  grid-column: span 2;
 }
 
 .close__button {
-  padding: 7px 133px;
+  width: 100%;
+  padding: 7px;
 }
 
 @media (width <=375px) {
@@ -360,12 +363,15 @@
     right: 11px;
   }
 
+  .button__save__card {
+    inline-size: 306px;
+  }
+
   .button__save {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-inline-size: 310px;
-    padding: 16px 20px;
+    justify-content: center;
+    
   }
 
   .save__button__icon {
@@ -373,8 +379,9 @@
     height: 28px;
   }
 
-  .popup {
-    inline-size: 100%;
+  .popup__window[open]  {
+    max-inline-size: 341px;
     padding: 30px 40px;
   }
+
 }

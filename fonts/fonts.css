@@ -13,7 +13,7 @@
 @font-face {
     font-display: swap;
     font-family:'Inter';
-    font-weight: min(400) max(785);
+    font-weight: minmax(400 785);
     src:
       local('Inter-Variable.woff2'), 
       url('../fonts/Inter-Variable.woff2') format('woff2 supports variations'),
